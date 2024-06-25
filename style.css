@@ -1,0 +1,80 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif; 
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+nav{
+    width: 303px;
+    height: 100%;
+    background-color: #1992D4;
+    color: white
+}
+.icon1 a{
+
+    color: white;
+}
+.icon2 a{
+color: white;
+}
+
+.Admin{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding-left: 30px;
+    padding-top: 30px;
+    margin-bottom: 35px;
+}
+main{
+    width: 100%;
+}
+header{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: 0px 10px 10px -5px black;
+}
+.top-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.search-input{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.search-input > input {
+    min-width: 700px;
+    border: none;
+    border-radius: 14px;
+    padding: 0.5rem 0.75rem;
+    background-color: lightgray;
+    margin-left: 1rem;
+    outline: none;
+}
+.bottom-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.bottom-section  button {
+    background-color: #1992D4;
+    color: white;
+    padding: .75rem 1.55rem;
+    border: none;
+    border-radius: 1.5rem;
+    margin-left: 1rem;
+    cursor: pointer;
+}

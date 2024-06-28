@@ -18,7 +18,8 @@ body {
 
 .sidebar {
   height: 100%;
-  width: 250px;
+  width: 220px;
+  min-width: 220px;
   background-color: #1992d4;
   color: white;
   padding: 1rem;
@@ -68,11 +69,8 @@ main {
 }
 
 header {
-  height: 150px;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  padding: 15px 30px ;
   background-color: white;
   box-shadow: 0px 10px 10px -5px grey;
 }
@@ -80,15 +78,19 @@ header {
 .top-section {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  ;
 }
 .search-input {
   display: flex;
+  flex-grow: 1;
+  max-width: 600px;
   align-items: center;
   gap: 0.5rem;
 }
 .search-input > input {
-  min-width: 700px;
+  flex-grow: 1;
   border: none;
   border-radius: 15px;
   padding: 0.5rem 0.75rem;
@@ -102,19 +104,20 @@ header {
 }
 .account > .avatar {
   border-radius: 50%;
-  margin: 0.5rem 1.5rem;
+  margin: 0rem 1.5rem;
   width: 40px;
   object-fit: cover;
 }
-.account > h3 {
-  font-weight: bold;
+.account > h2 {
+  font-weight: 500;
   font-size: 1rem;
+  font-weight: 1.5rem;
 }
 
 .bottom-section {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 
 }
 .first-part{
@@ -127,12 +130,18 @@ header {
     margin-right: 1rem;
 }
 .first-part > .profile-title{
-    line-height: 2rem;
-    font-size: 1.25rem;
+    line-height: 1rem;
+    font-size: 1rem;
+}
+.second-part{
+  display: flex;
+  align-items: center;
+
 }
 .profile-title > p{
-    font-size: 1rem;
-    font-weight: bold;
+    font-size: 0.6rem;
+    font-weight: 400;
+    line-height: 1rem;
 }
 
 .bottom-section button {
@@ -150,31 +159,55 @@ header {
     flex-grow: 1;
 }
 
-.cards {
-    grid-row: 2fr;
-    padding: 1.5rem;
-  }
+.project-portion h2{
+  font-weight: 600;
+  font-size: 1rem;
+}
   
   .cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    padding: 1.5rem;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
   }
   
   .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: white;
     border-radius: 8px;
     border-left: 5px solid #fde68a;
     padding: 1.5em 1em;
+    min-height: 150px;
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
   }
-  .cards > h2,
-  .announcements > h2,
-  .trending > h2 {
+  .cards h2 {
     font-size: 1.125rem;
   }
+
+  .card p{
+    font-size: 0.8rem;
+    color: grey;
+  }
+
+  .card-icons{
+    display: flex;
+    align-items: center ;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  .card-icons i {
+    color: grey;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
   
+  .card-icons i:hover {
+    color: #0f6a8e;
+  }
+
 .inner-content{
     display: flex;
     min-height: 100px;
@@ -185,23 +218,20 @@ header {
 ul{
     list-style: none;
 }
-.announcements h2,
-.trending h2 {
-  font-size: 1.125rem;
-  margin-bottom: 1rem;
-}
 
 .announcements ul {
-    padding: 1rem 0.5rem;
+
     background-color: white;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
-    margin: 1.5rem;
     list-style: none;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1.5rem;
   }
   
   .announcements ul li {
-    padding: 0.5rem 0;
+    margin: 1.5rem 0;
+    padding-bottom: 1.5rem;
     border-bottom: 1px solid #ddd;
   }
   
@@ -210,41 +240,35 @@ ul{
   }
   
   .announcements ul li p {
-    margin: 0;
-    line-height: 1.4;
+  font-size: 0.8rem;
+  color: grey;
   }
   
-  .announcements ul li p.title {
-    font-weight: bold;
-    margin-bottom: 0.5em;
-  }
-  
-  .announcements ul li p.content {
-    opacity: 0.9;
-    font-size: 0.9rem;
-  }
+  .announcements h3,
+.trending h3 {
+  font-size: 0.8rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
   
   .announcements h2,
 .trending h2 {
-  font-size: 1.125rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
 }
 
 .trending ul {
-    padding: 20px 46px;
     background-color: white;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
-    margin: 20px;
     list-style: none;
-    padding: 0;
   }
   
   .trending ul li {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    gap: 0.5rem;
+    padding: 0.5rem 1.5rem;
   }
   
   .trending ul li:last-child {
@@ -264,13 +288,13 @@ ul{
   }
   
   .trending ul li div p:first-child {
-    font-weight: 500;
+    font-weight: 400;
     margin: 0;
   }
   
   .trending ul li div p:nth-child(2) {
     opacity: 0.9;
-    font-size: 0.9rem;
+    font-size: 0.6rem;
     margin: 0;
   }
 
